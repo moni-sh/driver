@@ -7,31 +7,51 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.pretenders.monish.LoginActivity">
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    tools:context="com.pretenders.monish.LoginActivity"
+    style="@style/AppTheme">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:layout_below="@+id/spinner2"
+        android:text="@string/src"
+        android:id="@+id/src"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_below="@+id/spinner2"
+        android:text="@string/dst"
+        android:id="@+id/dst"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:gravity="center"
+        android:scrollIndicators="none"
+        android:spinnerMode="dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="בחר קו"
+        android:id="@+id/textView"
+
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
+
 </RelativeLayout>

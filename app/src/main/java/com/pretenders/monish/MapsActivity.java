@@ -42,7 +42,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public static final long FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS =
             UPDATE_INTERVAL_IN_MILLISECONDS / 2;
 
-    private static final float ZOOM = 16f;
+    private static final float ZOOM = 14f;
 
     // Keys for storing activity state in the Bundle.
     protected final static String REQUESTING_LOCATION_UPDATES_KEY = "requesting-location-updates-key";

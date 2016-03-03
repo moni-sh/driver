@@ -60,4 +60,18 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="src">לתל אביב</string>
+    <string name="dst">לנתניה</string>
+
+    <string-array name="line_array">
+        <item>4</item>
+        <item>5</item>
+        <item>25</item>
+        <item>51</item>
+        <item>66</item>
+        <item>78</item>
+        <item>125</item>
+        <item>606</item>
+    </string-array>
+
 </resources>

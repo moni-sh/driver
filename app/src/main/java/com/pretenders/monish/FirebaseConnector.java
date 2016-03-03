@@ -30,7 +30,6 @@ public class FirebaseConnector  {
     private Map<String,Marker> markers;
     private Map<String, Passenger> passengers;
     private GoogleMap mMap;
-    private Context context;
     private Circle searchCircle;
     ChildEventListener cel;
     Driver driver;
@@ -101,8 +100,6 @@ public class FirebaseConnector  {
                 System.out.println("The read failed: " + firebaseError.getMessage());
             }
         });
-
-        this.context = context;
     }
 
     public void onStop() {
