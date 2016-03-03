@@ -198,6 +198,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onStop() {
         mGoogleApiClient.disconnect();
         fc.onStop();
+        fc = null;
         super.onStop();
     }
 
@@ -239,7 +240,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude()), ZOOM));
         }
         startLocationUpdates();
-        fc.setLocation(mCurrentLocation);
+        if (fc == null) {
+            int line = 5;
+            boolean direction = true;
+            fc = new FirebaseConnector(this, mMap, line, direction);
+            fc.setLocation(mCurrentLocation);
+        }
     }
 
     /**
@@ -303,10 +309,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (mCurrentLocation != null) {
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude()), ZOOM));
         }
-
-        int line = 5;
-        boolean direction = true;
-        fc = new FirebaseConnector(this, mMap,line, direction);
     }
 
     @Override

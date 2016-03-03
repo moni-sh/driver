@@ -36,7 +36,8 @@
         android:scrollIndicators="none"
         android:spinnerMode="dialog"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView" />
+        android:layout_centerVertical="true"
+       />
 
     <TextView
         android:layout_width="wrap_content"
