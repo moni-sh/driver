@@ -70,7 +70,7 @@ public class FirebaseConnector  {
                 Passenger newPassenger = snapshot.getValue(Passenger.class);
                 String key = snapshot.getKey();
                 Marker marker = mMap.addMarker(new MarkerOptions().position(new LatLng(newPassenger.getLat(), newPassenger.getLng())).
-                        icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+                        icon(BitmapDescriptorFactory.fromResource(R.drawable.user_location_mark)));
                 markers.put(key, marker);
             }
 

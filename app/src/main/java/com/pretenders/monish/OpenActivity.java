@@ -21,13 +21,14 @@ public class OpenActivity extends Activity {
 
 
 
-        Button start = (Button) findViewById(R.id.button);
+        final Button start = (Button) findViewById(R.id.button);
         final Button go = (Button) findViewById(R.id.button2);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                go.setBackgroundResource(android.R.color.holo_orange_light);
+                start.setBackgroundResource(android.R.color.darker_gray);
+                go.setVisibility(View.VISIBLE);
                 go.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -53,7 +54,7 @@ public class OpenActivity extends Activity {
                             handler.post(new Runnable() {
                                 public void run() {
                                     progressBar.setProgress(progressStatus);
-                                    textView.setText(progressStatus + "/" + progressBar.getMax());
+                                    textView.setText(String.valueOf(progressStatus));
                                 }
                             });
                             try {

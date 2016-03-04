@@ -21,7 +21,10 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
@@ -71,6 +74,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * Represents a geographical location.
      */
     protected Location mCurrentLocation;
+    private Marker marker;
 
 
     private GoogleMap mMap;
@@ -239,6 +243,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (mMap != null) {
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude()), ZOOM));
         }
+        if (marker == null) {
+            marker = mMap.addMarker(new MarkerOptions().position(new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude())).
+                    icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
+          }
         startLocationUpdates();
         if (fc == null) {
             int line = 5;
@@ -256,6 +264,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mCurrentLocation = location;
         if (mMap != null) {
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), ZOOM));
+            marker.setPosition(new LatLng(location.getLatitude(), location.getLongitude()));
         }
         fc.updateLocation(location);
         //Toast.makeText(this, getResources().getString(R.string.location_updated_message),

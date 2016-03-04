@@ -4,7 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pretenders.monish.LoginActivity"
-    style="@style/AppTheme">
+    style="@style/AppTheme"
+    android:background="#f9f9d1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/bus"
+        android:layout_below="@+id/line1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/src" />
 
     <Button
         android:layout_width="wrap_content"
@@ -16,7 +29,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:visibility="invisible"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="#ffffff"
         android:textStyle="bold" />
 
     <Button
@@ -31,7 +44,7 @@
         android:layout_toRightOf="@+id/src"
         android:layout_toEndOf="@+id/src"
         android:visibility="invisible"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="#ffffff"
         android:textStyle="bold" />
 
     <Spinner
@@ -48,7 +61,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:text="קן"
+        android:text="קו"
         android:id="@+id/line1"
         android:textSize="36sp"
         android:background="@android:color/holo_orange_light"
