@@ -3,10 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.pretenders.monish.LoginActivity"
     style="@style/AppTheme">
 
@@ -15,18 +11,28 @@
         android:layout_height="wrap_content"
         android:text="@string/src"
         android:id="@+id/src"
+        android:textSize="36sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"
+        android:textColor="@android:color/holo_orange_light"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dst"
         android:id="@+id/dst"
-        android:layout_alignParentBottom="true"
+        android:textSize="36sp"
+        android:layout_alignTop="@+id/src"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/src"
+        android:layout_toEndOf="@+id/src"
+        android:visibility="invisible"
+        android:textColor="@android:color/holo_orange_light"
+        android:textStyle="bold" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -37,22 +43,20 @@
         android:spinnerMode="dialog"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-       />
+        android:visibility="invisible" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="בחר קו"
-        android:id="@+id/textView"
-
-        android:layout_alignParentRight="false"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="false"
+        android:layout_height="100dp"
+        android:text="קן"
+        android:id="@+id/line1"
+        android:textSize="36sp"
+        android:background="@android:color/holo_orange_light"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/dst"
+        android:layout_alignEnd="@+id/dst"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
-        android:textStyle="bold" />
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
