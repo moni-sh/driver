@@ -47,7 +47,7 @@ public class OpenActivity extends Activity {
                     private Handler handler = new Handler();
 
                     public void run() {
-                        while (progressStatus < 11) {
+                        while (progressStatus < 10) {
                             progressStatus += 1;
                             // Update the progress bar and display the
                             //current value in the text view
