@@ -72,11 +72,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="מנימום נוסעים: 10"
+        android:text="@string/min_passengers"
         android:id="@+id/textView3"
         android:paddingRight="6dp"
+        android:textSize="24sp"
+        android:gravity="left"
+        android:textStyle="bold"
         android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:textSize="24sp" />
+        android:layout_centerHorizontal="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPicker"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
